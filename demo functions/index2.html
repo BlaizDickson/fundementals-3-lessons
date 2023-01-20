@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions</title>
+<p id="demo"></p>
+</head>
+<body>
+    <script>
+        function My_function (val) {
+            document.getElementById("demo").innerHTML = val+2
+        }
+        My_function(34)
+    </script>
+    <script>
+        var MyFunction = new Function("a","b", "return a+b")
+        var x = MyFunction(4,10)
+        document.getElementById("demo").innerHTML = x + " good"
+    </script>
+    <script>
+        (function(){
+            alert("Hello World")
+        })()
+    </script>
+</body>
+</html>
