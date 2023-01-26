@@ -9,20 +9,22 @@
 </head>
 <body>
     <script>
-        function My_function (val) {
-            document.getElementById("demo").innerHTML = val+2
+        function pow(x,n) {
+           let result = x;
+           for (let i = 1; i < n; i++) {
+            result *= x;
+           }
+           return result
         }
-        My_function(34)
-    </script>
-    <script>
-        var MyFunction = new Function("a","b", "return a+b")
-        var x = MyFunction(4,10)
-        document.getElementById("demo").innerHTML = x + " good"
-    </script>
-    <script>
-        (function(){
-            alert("Hello World")
-        })()
+        let x = prompt ("x?",'')
+        let n = prompt ("n?",'')
+        if (n < 1) {
+            alert(`Power of ${n} is not supported, use a positive whole number`)
+        } else {
+            alert (pow(x,n))
+
+        }
+        
     </script>
 </body>
 </html>
